@@ -8,6 +8,9 @@ import Paper from '@mui/material/Paper';
 import { useState } from 'react';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material';
+import VideoControlButtons from './Components/VideoControlButtons'
+import ProgressBar from './Components/ProgressBar'
+import QuestionsPopup from './Components/QuestionsPopup'
 
 
 const AppContainer = styled('div')({
@@ -59,6 +62,9 @@ function App() {
                 onMouseLeave={onHoverHandler}
               >
                 <VideoPlayer />
+                <VideoControlButtons />
+                <ProgressBar />
+                <QuestionsPopup />
               </VideoContainer>
             </>
           }

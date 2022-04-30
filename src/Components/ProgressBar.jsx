@@ -7,15 +7,13 @@ import { Tooltip } from '@mui/material';
 
 function LinearProgressWithLabel(props) {
     return (
-        <Tooltip title={`Progress ${Math.round(props.value)}%`}>
+        <Tooltip title={`Progress 0%`}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Box sx={{ width: '100%', mr: 1 }}>
                     <LinearProgress variant="determinate" {...props} />
                 </Box>
                 <Box sx={{ minWidth: 35 }}>
-                    <Typography variant="body2" color="text.secondary">{`${Math.round(
-                        props.value,
-                    )}%`}</Typography>
+                    <Typography variant="body2" color="text.secondary">{0}</Typography>
                 </Box>
             </Box>
         </Tooltip >
@@ -34,9 +32,9 @@ LinearProgressWithLabel.propTypes = {
 function ProgressBar(props) {
     const [progress, setProgress] = React.useState(10);
 
-    React.useEffect(() => {
-        setProgress(props.currentSectionStartValue);
-    }, [props.currentSectionStartValue]);
+    // React.useEffect(() => {
+    //     setProgress(props.currentSectionStartValue);
+    // }, [props.currentSectionStartValue]);
 
     return (
         <Box sx={{ width: '100%' }}>
